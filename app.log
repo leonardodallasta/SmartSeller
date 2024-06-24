@@ -1,0 +1,31 @@
+2024-06-23 20:49:05,009 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 20:49:35,250 - INFO - Usuário leo registrado com sucesso.
+2024-06-23 20:49:52,590 - ERROR - Erro ao cadastrar usuário leo: ERRO:  duplicar valor da chave viola a restrição de unicidade "tb_usuarios_nome_usuario_key"
+DETAIL:  Chave (nome_usuario)=(leo) já existe.
+
+2024-06-23 20:49:53,540 - WARNING - Falha ao registrar o usuário leo.
+2024-06-23 20:58:34,414 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
+2024-06-23 21:00:07,530 - INFO - Tentativa de login para o usuário: teste
+2024-06-23 21:00:08,606 - WARNING - Usuário teste não encontrado.
+2024-06-23 21:00:15,387 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
+2024-06-23 21:04:23,696 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
+2024-06-23 21:04:28,665 - INFO - Tentativa de login para o usuário: postgres
+2024-06-23 21:04:31,245 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
+2024-06-23 21:04:46,059 - INFO - Tentativa de login para o usuário: postgres
+2024-06-23 21:04:46,894 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
+2024-06-23 21:04:55,124 - INFO - Tentativa de login para o usuário: postgres
+2024-06-23 21:04:56,002 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
+2024-06-23 21:05:24,144 - INFO - Tentativa de login para o usuário: postgres
+2024-06-23 21:05:25,272 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
+2024-06-23 21:05:35,278 - INFO - Tentativa de login para o usuário: postgres
+2024-06-23 21:05:36,136 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
+2024-06-23 21:05:47,035 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 21:10:21,030 - INFO - Usuário robledo logado com sucesso.
+2024-06-23 21:11:39,166 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 21:12:57,222 - WARNING - Tentativa de login falhou para o usuário: alfredo
+2024-06-23 21:13:33,344 - INFO - Usuário robledo logado com sucesso.
+2024-06-23 21:14:41,653 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 21:16:29,099 - INFO - Usuário leo logado com sucesso.
+2024-06-23 21:22:20,098 - INFO - Usuário teste registrado com sucesso.
+2024-06-23 21:22:24,776 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 21:22:41,790 - INFO - Usuário teste logado com sucesso.

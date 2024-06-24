@@ -1,3 +1,4 @@
+#database.py
 import psycopg2
 from tkinter import messagebox
 

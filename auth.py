@@ -1,7 +1,12 @@
+#auth.py
+import logging
 from tkinter import messagebox, Toplevel
 import ttkbootstrap as ttk
 from database import conectar_banco, cadastrar_usuario
 
+# Configurar o logging
+logging.basicConfig(level=logging.INFO, filename='app.log',
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 def verificar_login(entry_usuario, entry_senha, mostrar_botao_criar_usuario):
     usuario = entry_usuario.get()
@@ -9,11 +14,13 @@ def verificar_login(entry_usuario, entry_senha, mostrar_botao_criar_usuario):
 
     if not usuario or not senha:
         messagebox.showerror("Erro", "Preencha todos os campos!")
+        logging.warning("Tentativa de login com campos vazios.")
         return
 
     conexao = conectar_banco("postgres", "123")  # Substitua com suas credenciais
     if not conexao:
         messagebox.showerror("Erro", "Não foi possível conectar ao banco de dados.")
+        logging.error("Falha na conexão com o banco de dados.")
         return
 
     try:
@@ -22,14 +29,17 @@ def verificar_login(entry_usuario, entry_senha, mostrar_botao_criar_usuario):
         usuario_valido = cursor.fetchone()
         if usuario_valido:
             messagebox.showinfo("Login", "Login bem-sucedido!")
+            logging.info(f"Usuário {usuario} logado com sucesso.")
             mostrar_botao_criar_usuario()
         else:
             messagebox.showerror("Erro", "Usuário ou senha incorretos!")
-        
+            logging.warning(f"Tentativa de login falhou para o usuário: {usuario}")
+
         conexao.commit()
         cursor.close()
     except Exception as e:
         messagebox.showerror("Erro", f"Erro ao verificar login: {e}")
+        logging.error(f"Erro ao verificar login para o usuário {usuario}: {e}")
     finally:
         conexao.close()
 
@@ -57,11 +67,14 @@ def mostrar_janela_criar_usuario(root):
             if conexao:
                 if cadastrar_usuario_tb_usuarios(conexao, novo_usuario, nova_senha):
                     messagebox.showinfo("Sucesso", "Usuário registrado com sucesso!")
+                    logging.info(f"Usuário {novo_usuario} registrado com sucesso.")
                     janela_criar_usuario.destroy()
                 else:
                     messagebox.showerror("Erro", "Erro ao registrar usuário.")
+                    logging.warning(f"Falha ao registrar o usuário {novo_usuario}.")
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao criar usuário: {e}")
+            logging.error(f"Erro ao criar usuário {novo_usuario}: {e}")
             conexao.rollback()
         finally:
             if conexao:
@@ -79,5 +92,5 @@ def cadastrar_usuario_tb_usuarios(conexao, usuario, senha):
         cursor.close()
         return True
     except Exception as e:
-        print(f"Erro ao cadastrar usuário: {e}")
+        logging.error(f"Erro ao cadastrar usuário {usuario}: {e}")
         return False
