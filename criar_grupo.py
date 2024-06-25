@@ -16,11 +16,14 @@ def mostrar_janela_criar_grupo():
             messagebox.showerror("Erro", "O nome do grupo não pode estar vazio.")
             return
 
-        if salvar_grupo(nome_grupo, privilegios):
-            messagebox.showinfo("Sucesso", f"Grupo '{nome_grupo}' cadastrado com sucesso!")
-            janela_criar_grupo.destroy()
-        else:
-            messagebox.showerror("Erro", f"Erro ao salvar o grupo '{nome_grupo}'.")
+        try:
+            if salvar_grupo(nome_grupo, privilegios):
+                messagebox.showinfo("Sucesso", f"Grupo '{nome_grupo}' cadastrado com sucesso!")
+                janela_criar_grupo.destroy()
+            else:
+                messagebox.showerror("Erro", f"Erro ao salvar o grupo '{nome_grupo}'.")
+        except Exception as e:
+            messagebox.showerror("Erro", f"Ocorreu um erro ao salvar o grupo: {e}")
 
     janela_criar_grupo = Toplevel()
     janela_criar_grupo.title("Criar Novo Grupo")

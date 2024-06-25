@@ -29,3 +29,63 @@ DETAIL:  Chave (nome_usuario)=(leo) já existe.
 2024-06-23 21:22:20,098 - INFO - Usuário teste registrado com sucesso.
 2024-06-23 21:22:24,776 - INFO - Usuário postgres logado com sucesso.
 2024-06-23 21:22:41,790 - INFO - Usuário teste logado com sucesso.
+2024-06-23 21:36:53,458 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 00:48:02,934 - INFO - Usuário leo logado com sucesso.
+2024-06-24 00:54:36,739 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:00:08,362 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:02:58,197 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:09:10,179 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:12:37,486 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:13:46,090 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:15:10,471 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:15:47,082 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:16:40,688 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:20:03,369 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:22:37,202 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:22:59,279 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:24:02,946 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 01:25:17,659 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 02:34:01,150 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 02:34:04,549 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
+2024-06-24 02:34:13,443 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 02:40:14,887 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
+2024-06-24 02:47:11,041 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 17:28:39,626 - INFO - Usuário leo logado com sucesso.
+2024-06-24 20:55:10,555 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 20:56:29,598 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 20:56:32,248 - ERROR - Erro ao verificar login para o usuário postgres: name 'mostrar_botao_criar_usuario' is not defined
+2024-06-24 20:57:47,434 - INFO - Usuário postgres logado com sucesso.
+2024-06-24 20:57:58,757 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 02:25:56,160 - INFO - Usuário leo logado com sucesso.
+2024-06-25 02:26:04,999 - ERROR - Erro ao verificar login para o usuário leo: mostrar_botoes_apos_login() missing 2 required positional arguments: 'botao_atribuir_grupo' and 'botao_conceder_privilegio'
+2024-06-25 03:11:36,380 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:38:44,987 - INFO - Usuário leo logado com sucesso.
+2024-06-25 03:38:59,008 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:40:12,641 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:41:04,627 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:43:09,457 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:51:10,509 - INFO - Usuário leo logado com sucesso.
+2024-06-25 03:51:30,995 - ERROR - Erro ao verificar login para o usuário leo: name 'main_frame' is not defined
+2024-06-25 03:51:36,505 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:51:37,379 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
+2024-06-25 03:51:47,878 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:51:48,991 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
+2024-06-25 03:54:13,635 - INFO - Usuário leo logado com sucesso.
+2024-06-25 03:54:14,462 - ERROR - Erro ao verificar login para o usuário leo: name 'botao_sair' is not defined
+2024-06-25 03:54:25,050 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 03:54:26,003 - ERROR - Erro ao verificar login para o usuário postgres: name 'botao_sair' is not defined
+2024-06-25 03:56:30,504 - INFO - Usuário leo logado com sucesso.
+2024-06-25 03:56:31,299 - ERROR - Erro ao verificar login para o usuário leo: name 'botao_sair' is not defined
+2024-06-25 03:56:48,102 - INFO - Usuário leo logado com sucesso.
+2024-06-25 04:01:38,249 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:05:42,303 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:06:09,818 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:08:11,260 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:12:21,839 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:16:13,268 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:17:15,143 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:20:31,688 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:23:34,069 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:26:57,352 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 04:33:21,143 - INFO - Usuário leo logado com sucesso.
+2024-06-25 04:33:36,014 - INFO - Usuário postgres logado com sucesso.

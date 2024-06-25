@@ -1,4 +1,4 @@
-#gui.py
+# gui.py
 import tkinter as tk
 import ttkbootstrap as ttk
 from PIL import Image, ImageTk
@@ -8,6 +8,7 @@ from database import conectar_banco
 from celular import cadastrar_celular
 from atribuir_grupo import mostrar_janela_atribuir_grupo
 from criar_grupo import mostrar_janela_criar_grupo
+from estoque import mostrar_estoque  # Importar a função do arquivo estoque
 import psycopg2
 
 usuario_logado = None
@@ -53,36 +54,6 @@ def retornar_para_login(main_frame, botao_criar_usuario, botao_sair, botao_estoq
 
     global usuario_logado
     usuario_logado = None
-
-def mostrar_estoque(root, entry_usuario, entry_senha):
-    usuario = entry_usuario.get()
-    senha = entry_senha.get()
-
-    conexao = conectar_banco(usuario, senha)
-    if not conexao:
-        return
-
-    janela_estoque = Toplevel(root)
-    janela_estoque.title("Estoque de Celulares")
-    janela_estoque.geometry("500x400")
-
-    frame_estoque = ttk.Frame(janela_estoque)
-    frame_estoque.pack(fill=BOTH, expand=True, padx=10, pady=10)
-
-    try:
-        cursor = conexao.cursor()
-        cursor.execute("SELECT cel_nome, cel_quantidade FROM tb_celulares")
-        celulares = cursor.fetchall()
-        for celular in celulares:
-            nome, quantidade = celular
-            texto_celular = f"Nome: {nome} - Quantidade: {quantidade}"
-            label_celular = ttk.Label(frame_estoque, text=texto_celular, justify="left")
-            label_celular.pack(fill=X, padx=10, pady=2)
-
-        cursor.close()
-        conexao.close()
-    except Exception as e:
-        messagebox.showerror("Erro", f"Erro ao buscar celulares: {e}")
 
 def mostrar_janela_conceder_privilegio(root):
     def salvar_privilegio():
@@ -259,4 +230,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
