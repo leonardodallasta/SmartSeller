@@ -34,15 +34,13 @@ def cadastrar_fornecedor(conexao, nome_fornecedor):
         messagebox.showerror("Erro", f"Erro ao cadastrar fornecedor: {e}")
         return None
 
-def salvar_grupo(nome_grupo, privilegios, user, password):
+def salvar_grupo(nome_grupo, privilegios):
     try:
-        conexao = conectar_banco(user, password)
+        conexao = conectar_banco("postgres", "123")  # Substitua com suas credenciais
         if conexao:
             cursor = conexao.cursor()
-            cursor.execute(
-                "INSERT INTO tb_grupos (nome_grupo, ver_estoque, cadastrar_celular, criar_usuario, sair) VALUES (%s, %s, %s, %s, %s)",
-                (nome_grupo, privilegios['ver_estoque'], privilegios['cadastrar_celular'], privilegios['criar_usuario'], privilegios['sair'])
-            )
+            cursor.execute("INSERT INTO tb_grupos (nome_grupo, ver_estoque, cadastrar_celular, criar_usuario, sair) VALUES (%s, %s, %s, %s, %s)",
+                           (nome_grupo, privilegios['ver_estoque'], privilegios['cadastrar_celular'], privilegios['criar_usuario'], privilegios['sair']))
             conexao.commit()
             cursor.close()
             conexao.close()
@@ -51,9 +49,9 @@ def salvar_grupo(nome_grupo, privilegios, user, password):
         print(f"Erro ao salvar grupo: {e}")
         return False
 
-def cadastrar_usuario(nome_usuario, senha, user, password):
+def cadastrar_usuario(nome_usuario, senha):
     try:
-        conexao = conectar_banco(user, password)
+        conexao = conectar_banco("postgres", "123")  # Substitua com suas credenciais
         if conexao:
             cursor = conexao.cursor()
             cursor.execute("INSERT INTO tb_usuarios (nome_usuario, senha) VALUES (%s, %s)", (nome_usuario, senha))
@@ -63,6 +61,29 @@ def cadastrar_usuario(nome_usuario, senha, user, password):
             return True
     except Exception as e:
         print(f"Erro ao cadastrar usuário: {e}")
+        return False
+
+def atribuir_grupo(usuario, grupo, user, password):
+    try:
+        conexao = conectar_banco("postgres", "123")  # Substitua com suas credenciais
+        if conexao:
+            cursor = conexao.cursor()
+            cursor.execute("SELECT id FROM tb_grupos WHERE nome_grupo = %s", (grupo,))
+            grupo_id = cursor.fetchone()
+            if grupo_id:
+                grupo_id = grupo_id[0]
+            else:
+                cursor.execute("INSERT INTO tb_grupos (nome_grupo) VALUES (%s) RETURNING id", (grupo,))
+                grupo_id = cursor.fetchone()[0]
+
+            cursor.execute("UPDATE tb_usuarios SET grupo_id = %s WHERE nome_usuario = %s",
+                           (grupo_id, usuario))
+            conexao.commit()
+            cursor.close()
+            conexao.close()
+            return True
+    except Exception as e:
+        print(f"Erro ao atribuir grupo: {e}")
         return False
 
 def atribuir_grupo(usuario, grupo, user, password):

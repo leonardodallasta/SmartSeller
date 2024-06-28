@@ -3,6 +3,9 @@ import tkinter as tk
 import ttkbootstrap as ttk
 from tkinter import Toplevel, BOTH, X, messagebox
 from database import conectar_banco, vender_celular
+import json
+
+historico_transacoes = []
 
 def mostrar_estoque(root, entry_usuario, entry_senha):
     usuario = entry_usuario.get()
@@ -31,7 +34,7 @@ def mostrar_estoque(root, entry_usuario, entry_senha):
             label_celular.pack(fill=X, padx=10, pady=2)
 
             # Adiciona um botão de compra para cada celular
-            botao_comprar = ttk.Button(frame_estoque, text="Comprar", command=lambda codigo=codigo: realizar_compra(root, usuario, senha, codigo))
+            botao_comprar = ttk.Button(frame_estoque, text="Vender", command=lambda codigo=codigo: realizar_compra(root, usuario, senha, codigo))
             botao_comprar.pack(pady=2)  # Adiciona o botão à interface gráfica
 
         cursor.close()
@@ -44,10 +47,6 @@ def mostrar_estoque(root, entry_usuario, entry_senha):
             conexao.close()
 
 def realizar_compra(root, usuario, senha, codigo_celular):
-    conexao = conectar_banco(usuario, senha)
-    if not conexao:
-        return
-    
     janela_compra = Toplevel(root)
     janela_compra.title("Finalizar Compra")
     janela_compra.geometry("300x200")
@@ -87,9 +86,19 @@ def realizar_compra(root, usuario, senha, codigo_celular):
             return
 
         # Tentar vender o celular
+        conexao = conectar_banco(usuario, senha)
+        if not conexao:
+            return
+
         if vender_celular(conexao, codigo_celular):
             messagebox.showinfo("Sucesso", "Compra realizada com sucesso!")
             janela_compra.destroy()
+            # Adicione a transação ao histórico
+            historico_transacoes.append(('venda', codigo_celular))
+
+            # Salve o histórico em um arquivo
+            with open('historico_transacoes.json', 'w') as f:
+                json.dump(historico_transacoes, f)
         else:
             messagebox.showerror("Erro", "Erro ao realizar a compra.")
 
