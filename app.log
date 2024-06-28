@@ -1,154 +1,154 @@
-2024-06-23 20:49:05,009 - INFO - Usuário postgres logado com sucesso.
-2024-06-23 20:49:35,250 - INFO - Usuário leo registrado com sucesso.
-2024-06-23 20:49:52,590 - ERROR - Erro ao cadastrar usuário leo: ERRO:  duplicar valor da chave viola a restrição de unicidade "tb_usuarios_nome_usuario_key"
-DETAIL:  Chave (nome_usuario)=(leo) já existe.
+2024-06-23 20:49:05,009 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-23 20:49:35,250 - INFO - Usuï¿½rio leo registrado com sucesso.
+2024-06-23 20:49:52,590 - ERROR - Erro ao cadastrar usuï¿½rio leo: ERRO:  duplicar valor da chave viola a restriï¿½ï¿½o de unicidade "tb_usuarios_nome_usuario_key"
+DETAIL:  Chave (nome_usuario)=(leo) jï¿½ existe.
 
-2024-06-23 20:49:53,540 - WARNING - Falha ao registrar o usuário leo.
+2024-06-23 20:49:53,540 - WARNING - Falha ao registrar o usuï¿½rio leo.
 2024-06-23 20:58:34,414 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
-2024-06-23 21:00:07,530 - INFO - Tentativa de login para o usuário: teste
-2024-06-23 21:00:08,606 - WARNING - Usuário teste não encontrado.
+2024-06-23 21:00:07,530 - INFO - Tentativa de login para o usuï¿½rio: teste
+2024-06-23 21:00:08,606 - WARNING - Usuï¿½rio teste nï¿½o encontrado.
 2024-06-23 21:00:15,387 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
 2024-06-23 21:04:23,696 - ERROR - Erro inesperado: 'utf-8' codec can't decode byte 0xe7 in position 17: invalid continuation byte
-2024-06-23 21:04:28,665 - INFO - Tentativa de login para o usuário: postgres
-2024-06-23 21:04:31,245 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
-2024-06-23 21:04:46,059 - INFO - Tentativa de login para o usuário: postgres
-2024-06-23 21:04:46,894 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
-2024-06-23 21:04:55,124 - INFO - Tentativa de login para o usuário: postgres
-2024-06-23 21:04:56,002 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
-2024-06-23 21:05:24,144 - INFO - Tentativa de login para o usuário: postgres
-2024-06-23 21:05:25,272 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
-2024-06-23 21:05:35,278 - INFO - Tentativa de login para o usuário: postgres
-2024-06-23 21:05:36,136 - ERROR - Erro ao verificar login para o usuário postgres: Invalid salt
-2024-06-23 21:05:47,035 - INFO - Usuário postgres logado com sucesso.
-2024-06-23 21:10:21,030 - INFO - Usuário robledo logado com sucesso.
-2024-06-23 21:11:39,166 - INFO - Usuário postgres logado com sucesso.
-2024-06-23 21:12:57,222 - WARNING - Tentativa de login falhou para o usuário: alfredo
-2024-06-23 21:13:33,344 - INFO - Usuário robledo logado com sucesso.
-2024-06-23 21:14:41,653 - INFO - Usuário postgres logado com sucesso.
-2024-06-23 21:16:29,099 - INFO - Usuário leo logado com sucesso.
-2024-06-23 21:22:20,098 - INFO - Usuário teste registrado com sucesso.
-2024-06-23 21:22:24,776 - INFO - Usuário postgres logado com sucesso.
-2024-06-23 21:22:41,790 - INFO - Usuário teste logado com sucesso.
-2024-06-23 21:36:53,458 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 00:48:02,934 - INFO - Usuário leo logado com sucesso.
-2024-06-24 00:54:36,739 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:00:08,362 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:02:58,197 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:09:10,179 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:12:37,486 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:13:46,090 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:15:10,471 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:15:47,082 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:16:40,688 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:20:03,369 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:22:37,202 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:22:59,279 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:24:02,946 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 01:25:17,659 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 02:34:01,150 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 02:34:04,549 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
-2024-06-24 02:34:13,443 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 02:40:14,887 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
-2024-06-24 02:47:11,041 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 17:28:39,626 - INFO - Usuário leo logado com sucesso.
-2024-06-24 20:55:10,555 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 20:56:29,598 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 20:56:32,248 - ERROR - Erro ao verificar login para o usuário postgres: name 'mostrar_botao_criar_usuario' is not defined
-2024-06-24 20:57:47,434 - INFO - Usuário postgres logado com sucesso.
-2024-06-24 20:57:58,757 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 02:25:56,160 - INFO - Usuário leo logado com sucesso.
-2024-06-25 02:26:04,999 - ERROR - Erro ao verificar login para o usuário leo: mostrar_botoes_apos_login() missing 2 required positional arguments: 'botao_atribuir_grupo' and 'botao_conceder_privilegio'
-2024-06-25 03:11:36,380 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:38:44,987 - INFO - Usuário leo logado com sucesso.
-2024-06-25 03:38:59,008 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:40:12,641 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:41:04,627 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:43:09,457 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:51:10,509 - INFO - Usuário leo logado com sucesso.
-2024-06-25 03:51:30,995 - ERROR - Erro ao verificar login para o usuário leo: name 'main_frame' is not defined
-2024-06-25 03:51:36,505 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:51:37,379 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
-2024-06-25 03:51:47,878 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:51:48,991 - ERROR - Erro ao verificar login para o usuário postgres: name 'main_frame' is not defined
-2024-06-25 03:54:13,635 - INFO - Usuário leo logado com sucesso.
-2024-06-25 03:54:14,462 - ERROR - Erro ao verificar login para o usuário leo: name 'botao_sair' is not defined
-2024-06-25 03:54:25,050 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 03:54:26,003 - ERROR - Erro ao verificar login para o usuário postgres: name 'botao_sair' is not defined
-2024-06-25 03:56:30,504 - INFO - Usuário leo logado com sucesso.
-2024-06-25 03:56:31,299 - ERROR - Erro ao verificar login para o usuário leo: name 'botao_sair' is not defined
-2024-06-25 03:56:48,102 - INFO - Usuário leo logado com sucesso.
-2024-06-25 04:01:38,249 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:05:42,303 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:06:09,818 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:08:11,260 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:12:21,839 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:16:13,268 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:17:15,143 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:20:31,688 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:23:34,069 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:26:57,352 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 04:33:21,143 - INFO - Usuário leo logado com sucesso.
-2024-06-25 04:33:36,014 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 10:17:55,047 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 10:46:20,148 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 10:49:01,371 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 10:58:00,440 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:12:12,031 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:15:38,208 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:18:05,557 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:20:11,107 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:28:17,010 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:30:29,667 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:37:24,548 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 11:45:18,975 - INFO - Usuário postgres logado com sucesso.
+2024-06-23 21:04:28,665 - INFO - Tentativa de login para o usuï¿½rio: postgres
+2024-06-23 21:04:31,245 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: Invalid salt
+2024-06-23 21:04:46,059 - INFO - Tentativa de login para o usuï¿½rio: postgres
+2024-06-23 21:04:46,894 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: Invalid salt
+2024-06-23 21:04:55,124 - INFO - Tentativa de login para o usuï¿½rio: postgres
+2024-06-23 21:04:56,002 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: Invalid salt
+2024-06-23 21:05:24,144 - INFO - Tentativa de login para o usuï¿½rio: postgres
+2024-06-23 21:05:25,272 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: Invalid salt
+2024-06-23 21:05:35,278 - INFO - Tentativa de login para o usuï¿½rio: postgres
+2024-06-23 21:05:36,136 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: Invalid salt
+2024-06-23 21:05:47,035 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-23 21:10:21,030 - INFO - Usuï¿½rio robledo logado com sucesso.
+2024-06-23 21:11:39,166 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-23 21:12:57,222 - WARNING - Tentativa de login falhou para o usuï¿½rio: alfredo
+2024-06-23 21:13:33,344 - INFO - Usuï¿½rio robledo logado com sucesso.
+2024-06-23 21:14:41,653 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-23 21:16:29,099 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-23 21:22:20,098 - INFO - Usuï¿½rio teste registrado com sucesso.
+2024-06-23 21:22:24,776 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-23 21:22:41,790 - INFO - Usuï¿½rio teste logado com sucesso.
+2024-06-23 21:36:53,458 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 00:48:02,934 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-24 00:54:36,739 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:00:08,362 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:02:58,197 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:09:10,179 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:12:37,486 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:13:46,090 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:15:10,471 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:15:47,082 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:16:40,688 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:20:03,369 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:22:37,202 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:22:59,279 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:24:02,946 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 01:25:17,659 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 02:34:01,150 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 02:34:04,549 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'main_frame' is not defined
+2024-06-24 02:34:13,443 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 02:40:14,887 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'main_frame' is not defined
+2024-06-24 02:47:11,041 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 17:28:39,626 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-24 20:55:10,555 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 20:56:29,598 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 20:56:32,248 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'mostrar_botao_criar_usuario' is not defined
+2024-06-24 20:57:47,434 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-24 20:57:58,757 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 02:25:56,160 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 02:26:04,999 - ERROR - Erro ao verificar login para o usuï¿½rio leo: mostrar_botoes_apos_login() missing 2 required positional arguments: 'botao_atribuir_grupo' and 'botao_conceder_privilegio'
+2024-06-25 03:11:36,380 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:38:44,987 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 03:38:59,008 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:40:12,641 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:41:04,627 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:43:09,457 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:51:10,509 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 03:51:30,995 - ERROR - Erro ao verificar login para o usuï¿½rio leo: name 'main_frame' is not defined
+2024-06-25 03:51:36,505 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:51:37,379 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'main_frame' is not defined
+2024-06-25 03:51:47,878 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:51:48,991 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'main_frame' is not defined
+2024-06-25 03:54:13,635 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 03:54:14,462 - ERROR - Erro ao verificar login para o usuï¿½rio leo: name 'botao_sair' is not defined
+2024-06-25 03:54:25,050 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 03:54:26,003 - ERROR - Erro ao verificar login para o usuï¿½rio postgres: name 'botao_sair' is not defined
+2024-06-25 03:56:30,504 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 03:56:31,299 - ERROR - Erro ao verificar login para o usuï¿½rio leo: name 'botao_sair' is not defined
+2024-06-25 03:56:48,102 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 04:01:38,249 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:05:42,303 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:06:09,818 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:08:11,260 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:12:21,839 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:16:13,268 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:17:15,143 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:20:31,688 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:23:34,069 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:26:57,352 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 04:33:21,143 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 04:33:36,014 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 10:17:55,047 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 10:46:20,148 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 10:49:01,371 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 10:58:00,440 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:12:12,031 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:15:38,208 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:18:05,557 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:20:11,107 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:28:17,010 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:30:29,667 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:37:24,548 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 11:45:18,975 - INFO - Usuï¿½rio postgres logado com sucesso.
 2024-06-25 11:53:34,723 - WARNING - Tentativa de login com campos vazios.
 2024-06-25 11:53:37,294 - WARNING - Tentativa de login com campos vazios.
 2024-06-25 11:55:26,779 - WARNING - Tentativa de login com campos vazios.
-2024-06-25 13:44:46,582 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 13:49:10,744 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 13:56:30,553 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:05:51,780 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:20:17,311 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:20:57,472 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:21:09,821 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:27:32,205 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:28:48,828 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:38:32,320 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 14:46:28,204 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:09:15,278 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:23:07,839 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:23:44,670 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:26:01,937 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:26:36,973 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:27:03,237 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:27:38,587 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:28:19,943 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:30:08,314 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:30:41,686 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:31:42,777 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:32:27,732 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:32:58,540 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:33:44,929 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:43:59,392 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:44:35,495 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:45:20,418 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:46:07,457 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:48:17,358 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 16:49:58,339 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 18:06:59,248 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 18:46:32,411 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 18:48:20,482 - INFO - Usuário tester registrado com sucesso.
-2024-06-25 18:48:35,861 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 19:10:23,086 - INFO - Usuário leo logado com sucesso.
-2024-06-25 19:13:44,774 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 19:55:32,212 - WARNING - Tentativa de login falhou para o usuário: postgres
-2024-06-25 19:56:31,576 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 19:58:02,705 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:01:17,406 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:10:16,865 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:15:21,565 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:19:25,519 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:25:06,237 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:29:16,247 - INFO - Usuário postgres logado com sucesso.
-2024-06-25 20:36:00,559 - INFO - Usuário postgres logado com sucesso.
-2024-06-28 14:48:28,604 - INFO - Usuário postgres logado com sucesso.
+2024-06-25 13:44:46,582 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 13:49:10,744 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 13:56:30,553 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:05:51,780 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:20:17,311 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:20:57,472 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:21:09,821 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:27:32,205 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:28:48,828 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:38:32,320 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 14:46:28,204 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:09:15,278 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:23:07,839 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:23:44,670 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:26:01,937 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:26:36,973 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:27:03,237 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:27:38,587 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:28:19,943 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:30:08,314 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:30:41,686 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:31:42,777 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:32:27,732 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:32:58,540 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:33:44,929 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:43:59,392 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:44:35,495 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:45:20,418 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:46:07,457 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:48:17,358 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 16:49:58,339 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 18:06:59,248 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 18:46:32,411 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 18:48:20,482 - INFO - Usuï¿½rio tester registrado com sucesso.
+2024-06-25 18:48:35,861 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 19:10:23,086 - INFO - Usuï¿½rio leo logado com sucesso.
+2024-06-25 19:13:44,774 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 19:55:32,212 - WARNING - Tentativa de login falhou para o usuï¿½rio: postgres
+2024-06-25 19:56:31,576 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 19:58:02,705 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:01:17,406 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:10:16,865 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:15:21,565 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:19:25,519 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:25:06,237 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:29:16,247 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-25 20:36:00,559 - INFO - Usuï¿½rio postgres logado com sucesso.
+2024-06-28 14:48:28,604 - INFO - Usuï¿½rio postgres logado com sucesso.

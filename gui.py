@@ -239,6 +239,35 @@ def realizar_backup():
 
 
 
+def realizar_backup():
+    # Carregue o histórico de um arquivo
+    with open('historico_transacoes.json', 'r') as f:
+        historico_transacoes = json.load(f)
+
+    # Verifique se há transações para reverter
+    if not historico_transacoes:
+        messagebox.showinfo("Info", "Nenhuma transação para reverter.")
+        return
+
+    # Obtenha a última transação
+    ultima_transacao = historico_transacoes.pop()
+
+    # Reverta a transação
+    if ultima_transacao[0] == 'venda':
+        # Se a última transação foi uma venda, adicione o celular de volta ao estoque
+        detalhes_celular = ultima_transacao[1]
+        conexao = conectar_banco("postgres", "123")  # Substitua pelas suas credenciais
+        if not conexao:
+            return
+        if reverter_venda(conexao, detalhes_celular):
+            messagebox.showinfo("Sucesso", "A última transação foi revertida.")
+        else:
+            messagebox.showerror("Erro", "Erro ao reverter a última transação.")
+
+    # Salve o histórico atualizado em um arquivo
+    with open('historico_transacoes.json', 'w') as f:
+        json.dump(historico_transacoes, f)
+
 
 def main():
     root = ttk.Window(themename="cosmo")

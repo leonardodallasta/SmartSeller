@@ -65,6 +65,29 @@ def cadastrar_usuario(nome_usuario, senha):
 
 def atribuir_grupo(usuario, grupo, user, password):
     try:
+        conexao = conectar_banco("postgres", "123")  # Substitua com suas credenciais
+        if conexao:
+            cursor = conexao.cursor()
+            cursor.execute("SELECT id FROM tb_grupos WHERE nome_grupo = %s", (grupo,))
+            grupo_id = cursor.fetchone()
+            if grupo_id:
+                grupo_id = grupo_id[0]
+            else:
+                cursor.execute("INSERT INTO tb_grupos (nome_grupo) VALUES (%s) RETURNING id", (grupo,))
+                grupo_id = cursor.fetchone()[0]
+
+            cursor.execute("UPDATE tb_usuarios SET grupo_id = %s WHERE nome_usuario = %s",
+                           (grupo_id, usuario))
+            conexao.commit()
+            cursor.close()
+            conexao.close()
+            return True
+    except Exception as e:
+        print(f"Erro ao atribuir grupo: {e}")
+        return False
+
+def atribuir_grupo(usuario, grupo, user, password):
+    try:
         conexao = conectar_banco(user, password)
         if conexao:
             cursor = conexao.cursor()
