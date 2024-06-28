@@ -34,15 +34,13 @@ def cadastrar_fornecedor(conexao, nome_fornecedor):
         messagebox.showerror("Erro", f"Erro ao cadastrar fornecedor: {e}")
         return None
 
-def salvar_grupo(nome_grupo, privilegios, user, password):
+def salvar_grupo(nome_grupo, privilegios):
     try:
-        conexao = conectar_banco(user, password)
+        conexao = conectar_banco("postgres", "123")
         if conexao:
             cursor = conexao.cursor()
-            cursor.execute(
-                "INSERT INTO tb_grupos (nome_grupo, ver_estoque, cadastrar_celular, criar_usuario, sair) VALUES (%s, %s, %s, %s, %s)",
-                (nome_grupo, privilegios['ver_estoque'], privilegios['cadastrar_celular'], privilegios['criar_usuario'], privilegios['sair'])
-            )
+            cursor.execute("INSERT INTO tb_grupos (nome_grupo, ver_estoque, cadastrar_celular, criar_usuario, sair) VALUES (%s, %s, %s, %s, %s)",
+                           (nome_grupo, privilegios['ver_estoque'], privilegios['cadastrar_celular'], privilegios['criar_usuario'], privilegios['sair']))
             conexao.commit()
             cursor.close()
             conexao.close()
@@ -51,9 +49,9 @@ def salvar_grupo(nome_grupo, privilegios, user, password):
         print(f"Erro ao salvar grupo: {e}")
         return False
 
-def cadastrar_usuario(nome_usuario, senha, user, password):
+def cadastrar_usuario(nome_usuario, senha):
     try:
-        conexao = conectar_banco(user, password)
+        conexao = conectar_banco("postgres", "123")
         if conexao:
             cursor = conexao.cursor()
             cursor.execute("INSERT INTO tb_usuarios (nome_usuario, senha) VALUES (%s, %s)", (nome_usuario, senha))
@@ -111,10 +109,9 @@ def vender_celular(conexao, codigo_celular):
 
 def obter_celulares_disponiveis(conexao):
     try:
-        cursor = conexao.cursor()
-        cursor.execute("SELECT cel_codigo, cel_nome FROM tb_celulares WHERE cel_quantidade > 0")
-        celulares = cursor.fetchall()
-        cursor.close()
+        with conexao.cursor() as cursor:
+            cursor.execute("SELECT cel_codigo, cel_nome FROM tb_celulares WHERE cel_quantidade > 0")
+            celulares = cursor.fetchall()
         return celulares
     except Exception as e:
         messagebox.showerror("Erro", f"Erro ao buscar celulares: {e}")

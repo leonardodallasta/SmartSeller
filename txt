@@ -1,7 +1,6 @@
 # gui.py
 import tkinter as tk
 import ttkbootstrap as ttk
-import json
 from PIL import Image, ImageTk
 from tkinter import Toplevel, BOTH, X, messagebox
 from auth import verificar_login, mostrar_janela_criar_usuario
@@ -155,58 +154,6 @@ def obter_privilegios_disponiveis(conexao, usuario):
     except psycopg2.Error as e:
         messagebox.showerror("Erro", f"Erro ao buscar privilégios: {e}")
         return []
-    
-def reverter_venda(conexao, codigo_celular):
-    try:
-        # Crie um cursor
-        cursor = conexao.cursor()
-
-        # Obtenha a quantidade atual do celular
-        cursor.execute("SELECT cel_quantidade FROM tb_celulares WHERE cel_codigo = %s", (codigo_celular,))
-        quantidade_atual = cursor.fetchone()[0]
-
-        # Calcule a nova quantidade
-        nova_quantidade = quantidade_atual + 1  # Assumindo que você está revertendo a venda de um único item
-
-        # Atualize a quantidade do celular no banco de dados
-        cursor.execute("UPDATE tb_celulares SET cel_quantidade = %s WHERE cel_codigo = %s", (nova_quantidade, codigo_celular))
-
-        # Confirme a transação
-        conexao.commit()
-
-        # Feche o cursor
-        cursor.close()
-
-        return True
-    except Exception as e:
-        messagebox.showerror("Erro", f"Erro ao reverter venda: {e}")
-        return False
-
-# Quando a aplicação é iniciada, salve o estado inicial do estoque
-def salvar_estado_inicial(conexao):
-    cursor = conexao.cursor()
-    cursor.execute("SELECT * FROM tb_celulares")
-    estoque_inicial = cursor.fetchall()
-    cursor.close()
-
-    # Salve o estoque inicial em um arquivo
-    with open('estoque_inicial.json', 'w') as f:
-        json.dump(estoque_inicial, f)
-
-# Quando você quer restaurar o estoque para o estado inicial
-def restaurar_estoque(conexao):
-    # Carregue o estoque inicial de um arquivo
-    with open('estoque_inicial.json', 'r') as f:
-        estoque_inicial = json.load(f)
-
-    cursor = conexao.cursor()
-    for item in estoque_inicial:
-        codigo_celular, nome, quantidade, ano_fabricacao = item
-        cursor.execute("UPDATE tb_celulares SET cel_nome = %s, cel_quantidade = %s, cel_ano_fabricacao = %s WHERE cel_codigo = %s",
-                       (nome, quantidade, ano_fabricacao, codigo_celular))
-    conexao.commit()
-    cursor.close()
-
 
 def realizar_backup():
     # Carregue o histórico de um arquivo
@@ -221,8 +168,8 @@ def realizar_backup():
     # Obtenha a última transação
     ultima_transacao = historico_transacoes.pop()
 
-    # Verifique se a última transação foi uma venda e se contém detalhes do celular
-    if ultima_transacao[0] == 'venda' and len(ultima_transacao) > 1:
+    # Reverta a transação
+    if ultima_transacao[0] == 'venda':
         # Se a última transação foi uma venda, adicione o celular de volta ao estoque
         detalhes_celular = ultima_transacao[1]
         conexao = conectar_banco("postgres", "123")  # Substitua pelas suas credenciais
@@ -236,8 +183,6 @@ def realizar_backup():
     # Salve o histórico atualizado em um arquivo
     with open('historico_transacoes.json', 'w') as f:
         json.dump(historico_transacoes, f)
-
-
 
 
 def main():
